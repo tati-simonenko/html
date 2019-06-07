@@ -1,0 +1,263 @@
+.best-stuff__title {
+  font-size: $font-size-h2;
+  line-height: $line-height-title;
+  color: $title-color;
+  margin: 0;
+  margin-bottom: 4px;
+  margin-top: 29px;
+}
+
+.best-stuff__subtitle {
+  font-size: 17px;
+  line-height: 20px;
+  color: $seafoam-blue;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 22px;
+}
+
+.best-stuff__text {
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-color;
+  margin: 0;
+  margin-bottom: 22px;
+}
+
+.best-stuff__list {
+  box-sizing: border-box;
+  display: table;
+  width: 100%;
+  margin-bottom: 25px;
+  border-collapse: collapse;
+}
+
+.best-stuff__row {
+  border-collapse: collapse;
+  min-width: 101px;
+}
+
+.best-stuff__field {
+  font-size: $font-size-base;
+  color: $text-color;
+  line-height: 20px;
+  padding: 7px 0 11px;
+  border-bottom: 1px solid $secondary-color;
+  min-width: 81px;
+}
+
+.best-stuff__value {
+  font-size: $font-size-base;
+  color: $text-color;
+  line-height: 20px;
+  border-bottom: 1px solid $secondary-color;
+  padding: 8px 0 11px;
+}
+
+.best-stuff__pic {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  background-color: #f1f1f1;
+}
+
+.best-stuff__price {
+  color: $text-color;
+  font-size: 17px;
+  line-height: $line-height-base;
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.best-stuff__btn {
+  font-size: 17px;
+  line-height: 20px;
+  background-color: $bg-base;
+  border: solid 2px;
+  border-color: $text-color;
+  color: $text-color;
+  text-transform: uppercase;
+  margin: 0 auto;
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 13px;
+  width: 100%;
+  font-weight: bold;
+  margin-bottom: 36px;
+}
+
+.btn:hover {
+  background-color: $text-color;
+  color: $bg-base;
+}
+
+.btn:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.best-stuff {
+  position: relative;
+  margin-bottom: 26px;
+}
+
+.best-stuff::after {
+  content: "";
+  display: block;
+  height: 7px;
+  margin: 0;
+  padding: 0;
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-size: 319px 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .best-stuff {
+    margin-bottom: 50px;
+  }
+
+  .best-stuff__inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .best-stuff__heading {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+
+  .best-stuff__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .best-stuff__text {
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 38px;
+  }
+
+  .best-stuff__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .best-stuff__dsc {
+    flex-direction: column;
+    flex-basis: 292px;
+  }
+
+  .best-stuff__order {
+    width: 292px;
+    margin-top: -131px;
+  }
+
+  .best-stuff__title {
+    font-size: 43px;
+    line-height: 1.16;
+    margin: 0;
+  }
+
+  .best-stuff__subtitle {
+    width: 75px;
+    margin-bottom: 0;
+    margin-right: 18px;
+    margin-top: 10px;
+  }
+
+  .best-stuff__field {
+    min-width: 67px;
+  }
+
+  .best-stuff__price {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 34px;
+  }
+
+  .best-stuff__pic {
+    margin-bottom: 0;
+    width: 333px;
+    height: 413px;
+  }
+
+  .best-stuff__btn {
+    margin-bottom: 52px;
+  }
+
+  .best-stuff::after {
+    height: 17px;
+    background-position: -22px 0;
+    background-size: 768px 17px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .best-stuff__inner {
+    position: relative;
+  }
+
+  .best-stuff {
+    margin-bottom: 58px;
+  }
+
+  .best-stuff__heading {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    position: relative;
+    top: 79px;
+    left: -2px;
+    z-index: 1;
+    margin-bottom: 129px;
+  }
+
+  .best-stuff__title {
+    font-size: 53px;
+    line-height: 1.08;
+  }
+
+  .best-stuff__subtitle {
+    margin-right: 43px;
+    margin-left: 53px;
+    margin-top: 12px;
+  }
+
+  .best-stuff__dsc {
+    margin-left: 175px;
+    margin-bottom: 128px;
+  }
+
+  .best-stuff__order {
+    margin-left: 175px;
+  }
+
+  .best-stuff__price {
+    margin-bottom: 33px;
+    margin-top: 84px;
+  }
+
+  .best-stuff__text {
+    margin-bottom: 50px;
+  }
+
+  .best-stuff__pic {
+    position: absolute;
+    width: 525px;
+    height: 636px;
+    top: 27px;
+    right: 50px;
+  }
+
+  .best-stuff::after {
+    height: 23px;
+    background-size: 1150px 23px;
+  }
+
+  .best-stuff__btn {
+    margin-bottom: 75px;
+  }
+}

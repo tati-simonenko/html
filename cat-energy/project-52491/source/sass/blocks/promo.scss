@@ -1,0 +1,107 @@
+.promo {
+  padding: 40px 20px 34px;
+  box-sizing: border-box;
+}
+
+.promo__wrapper {
+  position: relative;
+  min-height: 289px;
+  padding-top: 186px;
+  box-sizing: border-box;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.promo__logo {
+  content: "";
+  position: absolute;
+  top: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 56px;
+  height: 61px;
+
+  fill: #ffffff;
+}
+
+.promo__text {
+  max-width: 165px;
+  margin: 0 auto;
+
+  font-family: $font-family-arial;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .promo {
+    padding: 0;
+    padding-top: 68px;
+    padding-bottom: 55px;
+  }
+
+  .promo__wrapper {
+    min-height: 200px;
+    padding-top: 72px;
+    padding-left: 424px;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+  }
+
+  .promo__logo {
+    left: 90px;
+    transform: none;
+  }
+
+  .promo__text {
+    margin: 0;
+    text-align: left;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo {
+    width: 20%;
+    padding: 0;
+  }
+
+  .promo__wrapper {
+    min-height: 290px;
+    padding: 0;
+    padding-top: 188px;
+
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+  }
+
+  .promo__text {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .promo__logo {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .promo__wrapper {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
+}
+
+@media (min-width: $tablet-width) and (min-resolution: $retina-dpi),
+  (min-width: $tablet-width) and (min-resolution: $retina-dppx) {
+  .promo__wrapper {
+    background-image: url("../img/gift-photo-tablet@2x.jpg");
+  }
+}
+
+@media (min-width: $desktop-width) and (min-resolution: $retina-dpi),
+  (min-width: $desktop-width) and (min-resolution: $retina-dppx) {
+  .promo__wrapper {
+    background-image: url("../img/gift-photo-desktop@2x.jpg");
+  }
+}

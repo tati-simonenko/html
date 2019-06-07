@@ -1,0 +1,246 @@
+.reviews::after {
+  content: "";
+  display: block;
+  height: 7px;
+  background-image: url("./../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  background-size: 320px 100%;
+  transform: rotate(180deg);
+}
+
+.reviews__grid {
+  max-width: 320px;
+  padding: 0 30px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 44px;
+}
+
+.reviews__title {
+  @include title();
+  margin-bottom: 10px;
+}
+
+.reviews__text {
+  @include text(15px, 30px);
+  margin-bottom: 31px;
+}
+
+.reviews__author {
+  font-size: 17px;
+  line-height: 20px;
+  font-family: "Open Sans", "Tahoma", sans-serif;
+  font-weight: bold;
+  color: #000000;
+}
+
+.reviews__inst {
+  @include text(17px,30px);
+  margin-bottom: 27px;
+  margin-top: 5px;
+}
+
+.reviews__write {
+  @include button();
+  margin-top: 36px;
+}
+
+.reviews__write:hover {
+  background-color: #444444;
+  color: #ffffff;
+}
+
+.reviews__write:active span {
+  opacity: 0.3;
+}
+
+.reviews__wrapper {
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+}
+
+.reviews__next {
+  border: none;
+  background-image: url("./../img/left.svg");
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  width: 122px;
+  height: 50px;
+  background-position: 37px 15px;
+  cursor: pointer;
+}
+
+.reviews__next:hover {
+  opacity: 0.6;
+}
+
+.reviews__next:active {
+  opacity: 0.3;
+}
+
+.reviews__wrapper-next {
+  border: 1px solid #ececec;
+  flex-grow: 1;
+}
+
+.reviews__back {
+  border: none;
+  background-image: url("./../img/right.svg");
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  width: 122px;
+  height: 50px;
+  background-position: 39px 16px;
+  cursor: pointer;
+}
+
+.reviews__back:hover {
+  opacity: 0.6;
+}
+
+.reviews__back:active {
+  opacity: 0.3;
+}
+
+.reviews__wrapper-back {
+  border: 1px solid #ececec;
+  flex-grow: 1;
+}
+
+.reviews__wrapper-inst {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .reviews {
+    padding-bottom: 26px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("./../img/review@2x.jpg");
+    }
+    background-image: url("./../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 39px;
+    background-size: 349px 457px;
+
+    &::after {
+      height: 17px;
+      background-size: 768px 100%;
+    }
+  }
+
+  .reviews__grid {
+    flex-wrap: wrap;
+    max-width: 768px;
+    padding: 114px 50px 13px;
+  }
+
+  .reviews__wrapper {
+    width: auto;
+    margin: 0;
+  }
+
+  .reviews__wrapper-inst {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .reviews__wrapper-next {
+    border: none;
+  }
+
+  .reviews__wrapper-back {
+    border: none;
+  }
+
+  .reviews__write {
+    order: -1;
+    margin-left: auto;
+    margin-bottom: -90px;
+    width: 175px;
+  }
+
+  .reviews__text {
+    margin-bottom: 62px;
+    font-size: 17px;
+    margin-top: 14px;
+  }
+
+  .reviews__next {
+    width: 100px;
+    background-position: 39px 13px;
+  }
+
+  .reviews__back {
+    width: 100px;
+    background-position: 31px 13px;
+  }
+
+  .reviews__title {
+    @include title(43px, 50px);
+    margin-bottom: 38px;
+  }
+
+  .reviews__author {
+    font-size: 18px;
+  }
+
+  .reviews__wrapper-width {
+    margin-bottom: 67px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .reviews {
+    padding-top: 157px;
+    padding-bottom: 71px;
+    background-position: 50px 78px;
+    background-size: 349px 457px;
+
+    &::after {
+      width: 1050px;
+      margin: 0 auto;
+      height: 23px;
+      background-size: 1050px 100%;
+    }
+  }
+
+  .reviews__text {
+    margin-top: 0;
+    font-size: 17px;
+    margin-left: 5px;
+    margin-bottom: 44px;
+    padding-right: 100px;
+  }
+
+  .reviews__grid {
+    margin: 0 auto;
+    background-position: 50px 0;
+    max-width: 1150px;
+    padding: 0 50px 133px 220px;
+  }
+
+  .reviews__write {
+    margin-bottom: -105px;
+    width: 175px;
+  }
+
+  .reviews__wrapper-width {
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+
+  .reviews__title {
+    font-size: 53px;
+    line-height: 57px;
+    margin-bottom: 48px;
+  }
+
+  .reviews__next {
+    background-position: 44px 13px;
+  }
+}

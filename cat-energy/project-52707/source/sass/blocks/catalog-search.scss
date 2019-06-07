@@ -1,0 +1,13 @@
+.catalog-search {
+  margin-bottom: 28px;
+  border-top: $main-divider #ededed;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 65px;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 74px;
+  }
+}

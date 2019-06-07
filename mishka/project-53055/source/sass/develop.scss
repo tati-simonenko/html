@@ -1,0 +1,40 @@
+.develop {
+  display: flex;
+  margin-right: 30px;
+}
+
+.develop__item {
+  @include list-point(19px ,18px);
+  text-decoration: none;
+  padding-right: 30px;
+  margin: 0 auto;
+  justify-content: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.develop__item::after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 40px;
+  right: -30px;
+  top: -10px;
+  background-image: url("./../img/htmlacademy.svg");
+  background-repeat: no-repeat;
+  background-size: 120%;
+}
+
+.develop__item:active {
+  opacity: 0.3;
+}
+
+@media (min-width: 768px) {
+  .develop {
+    margin-top: 30px;
+  }
+
+  .develop__item {
+    margin-top: 32px;
+  }
+}

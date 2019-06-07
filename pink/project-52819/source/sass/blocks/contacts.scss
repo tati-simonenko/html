@@ -1,0 +1,135 @@
+.contacts__wrapper {
+  width: 280px;
+  margin: 0 auto;
+  padding: 42px 0 35px;
+}
+
+.contacts__title {
+  @include margin0-padding0;
+
+  margin-bottom: 32px;
+
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.contacts__data-wrapper {
+  margin-bottom: 21px;
+}
+
+.contacts__data-wrapper:last-child {
+  margin-bottom: 0;
+}
+
+.contacts__text {
+  margin-bottom: 2px;
+
+  display: block;
+  font-size: 18px;
+  text-align: center;
+}
+
+.contacts__link {
+  @include margin0-padding0;
+
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+  text-align: center;
+  color: $red-color;
+}
+
+.contacts__link-tel {
+  @include margin0-padding0;
+
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+  color: $red-color;
+  text-decoration: none;
+}
+
+.contacts__email:hover,
+.contacts__email:focus {
+  color: $text-color;
+  cursor: pointer;
+}
+
+.contacts__email:active {
+  color: $text-color-30;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts__wrapper {
+    box-sizing: border-box;
+    width: 620px;
+    margin: 0 auto;
+    padding: 45px 25px 27px;
+  }
+
+  .contacts__data-wrapper-all {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contacts__data-wrapper {
+    box-sizing: border-box;
+    width: 40%;
+    margin-bottom: 45px;
+
+    &:first-child {
+      margin-right: 88px;
+    }
+  }
+
+  .contacts__title {
+    margin-bottom: 40px;
+
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .contacts__text {
+    margin-bottom: 5px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts__wrapper {
+    width: 940px;
+    margin: 0 auto;
+    padding: 64px 25px 15px;
+  }
+
+  .contacts__data-wrapper-all {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .contacts__data-wrapper {
+    width: 33%;
+    margin-bottom: 40px;
+
+    &:first-child {
+      margin-right: 0;
+    }
+  }
+
+  .contacts-order {
+    order: 2;
+  }
+
+  .contacts__title {
+    margin-bottom: 55px;
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .contacts__text {
+    margin-bottom: 22px;
+  }
+}

@@ -1,0 +1,79 @@
+body {
+  min-width: @mobile-width;
+  margin: 0;
+  padding: 0;
+  font-family: @font-family;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #333333;
+}
+
+@font-face {
+  font-weight: normal;
+  font-family: "PTSans";
+  font-style: normal;
+  src: url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: "PTSans";
+  font-style: normal;
+  src: url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsansbold.woff") format("woff");
+  font-display: swap;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  outline: none;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+ul {
+  list-style-type: none;
+}
+
+fieldset {
+  border: none;
+}
+
+.container {
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container {
+    width: 1200px;
+    box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
+  }
+}

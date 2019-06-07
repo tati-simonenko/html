@@ -1,0 +1,142 @@
+.modal-error {
+  width: 100%;
+  height: 100%;
+
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // background-color: $text-color-10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  z-index: 10;
+}
+
+.modal-error__wrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 20px;
+  padding-top: 42px;
+  padding-bottom: 50px;
+
+  background-color: $white-color;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15);
+
+  width: 320px;
+  margin: 0 auto;
+}
+
+.modal-error__title {
+  @include margin0-padding0;
+
+  padding-bottom: 32px;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+}
+
+.modal-error__text {
+  @include margin0-padding0;
+  padding-bottom: 40px;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+}
+
+.modal-error__btn-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-error__btn {
+  padding: 20px 20px;
+
+  line-height: 30px;
+  font-weight: 700;
+  color: $white-color;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: $green-color;
+  border: 2px solid $green-color;
+}
+
+.modal-error__btn:hover,
+.modal-error__btn:focus {
+  background-color: $green-color-dark;
+  border: 2px solid $green-color-dark;
+}
+
+.modal-error__btn:active {
+  color: $white-color-30;
+  background-color: $green-color-dark;
+  border: 2px solid $green-color-dark;
+}
+
+.modal-error__btn:disabled {
+  background-color: $grey-border;
+  border: 2px solid $grey-border;
+}
+
+@media (min-width: $tablet-width) {
+  .modal-error__wrapper {
+    width: 469px;
+    padding: 0 80px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+
+    border-radius: 8px;
+  }
+
+  .modal-error__title {
+    padding: 0 35px;
+    padding-bottom: 30px;
+
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .modal-error__text {
+    padding-bottom: 40px;
+
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .modal-error__wrapper {
+    width: 780px;
+    padding: 0;
+    padding-top: 45px;
+  }
+
+  .modal-error__title {
+    padding: 0 212px;
+    padding-bottom: 30px;
+  }
+
+  .modal-error__text {
+    padding: 0 212px;
+    padding-bottom: 56px;
+  }
+
+  .modal-error__btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: $grey-bg;
+
+    padding-top: 48px;
+    padding-bottom: 53px;
+    padding-right: 240px;
+    padding-left: 240px;
+  }
+}

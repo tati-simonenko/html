@@ -1,0 +1,81 @@
+.tel {
+  margin-bottom: 32px;
+  margin-top: 0;
+}
+
+.tel__point {
+  position: relative;
+  display: flex;
+}
+
+.tel__number {
+  @include text(19px,18px);
+  border: none;
+  border-bottom: 2px solid #000000;
+  position: relative;
+  padding-bottom: 11px;
+  width: 100%;
+}
+
+.tel__number:hover {
+  border-color: #62d1ba;
+}
+
+.tel__number:focus {
+  border-color: #62d1ba;
+}
+
+.tel__number:hover + svg {
+  fill: #62d1ba;
+  opacity: 1;
+}
+
+.tel__number:focus + svg {
+  fill: #62d1ba;
+  opacity: 1;
+}
+
+.tel__point svg {
+  opacity: 0.3;
+}
+
+.tel__icon {
+  position: absolute;
+  right: 8px;
+}
+
+@media (min-width: 768px) {
+  .tel {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .tel__number {
+    width: 93%;
+    background-color: #f1f1f1;
+    padding-left: 16px;
+    padding-bottom: 13px;
+  }
+
+  .tel__icon {
+    right: 47px;
+  }
+
+  .tel__point {
+    width: 100%;
+    padding-top: 12px;
+    margin-left: 17px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .tel__number {
+    width: 91%;
+    padding-top: 8px;
+  }
+
+  .tel__icon {
+    right: 58px;
+    top: 19px;
+  }
+}

@@ -1,0 +1,29 @@
+.page-main {
+  font-family: $font-family;
+  color: $text-color;
+}
+
+.page-main__wrapper {
+  display: flex;
+  text-align: center;
+
+  background-color: #2a3949;
+}
+
+@media (min-width: $tablet-width) {
+  .page-main__picture {
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .page-main__title {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main__picture {
+    max-width: 940px;
+    background-size: cover;
+  }
+}

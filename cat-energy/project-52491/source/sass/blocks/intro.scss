@@ -1,0 +1,168 @@
+.intro {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
+  padding: 0 20px 0;
+  box-sizing: border-box;
+}
+
+.intro::before {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+
+  height: 305px;
+  width: 100%;
+
+  background-color: #63a73a;
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: 320px 305px;
+  background-position-x: 50%;
+}
+
+.intro__title {
+  margin: 27px 0 25px;
+
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+}
+
+.intro__text {
+  margin: 0 0 28px;
+  font-size: 14px;
+  line-height: 14px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.intro__choose-program {
+  margin: 0 auto;
+}
+
+.intro__promo {
+  width: 280px;
+  height: 270px;
+  margin: 0 auto 4px;
+
+  background-image: url("../img/index-can-mobile@1x.png");
+}
+
+@media (min-width: $tablet-width) {
+  .intro {
+    margin-bottom: 0;
+    background: none;
+  }
+
+  .intro::before {
+    display: none;
+  }
+
+  .intro__title {
+    max-width: 420px;
+    margin: 28px 0 42px 97px;
+
+    font-size: 60px;
+    line-height: 60px;
+    color: #111111;
+    text-align: left;
+  }
+
+  .intro__text {
+    max-width: 420px;
+    margin: 0 0 48px 100px;
+
+    font-size: 20px;
+    line-height: 20px;
+    color: #111111;
+    text-align: left;
+  }
+
+  .intro__choose-program {
+    width: 245px;
+    height: 52px;
+    margin-left: 100px;
+    z-index: 1;
+
+    text-align: left;
+  }
+
+  .intro__promo {
+    width: 710px;
+    height: 610px;
+    margin-top: -80px;
+    margin-bottom: 0;
+    z-index: 0;
+
+    order: 1;
+
+    background-image: url("../img/index-can-tablet@1x.jpg");
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .intro {
+    margin-bottom: 270px;
+  }
+
+  .intro__title {
+    margin: 80px 0 40px 100px;
+  }
+
+  .intro__text {
+    margin-bottom: 53px;
+    margin-left: 100px;
+  }
+
+  .intro__choose-program {
+    margin-left: 100px;
+  }
+
+  .intro__promo {
+    position: absolute;
+    top: 80px;
+    left: 490px;
+    z-index: -1;
+    background-image: url("../img/index-can-desktop@1x.png");
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .intro::before {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
+
+  .intro__promo {
+    background-image: url("../img/index-can-mobile@2x.png");
+    background-size: 280px 270px;
+  }
+}
+
+@media (min-width: $tablet-width) and (min-resolution: $retina-dpi),
+  (min-width: $tablet-width) and (min-resolution: $retina-dppx) {
+  .intro__promo {
+    background-image: url("../img/index-can-tablet@2x.jpg");
+    background-repeat: no-repeat;
+    background-size: 709px 609px;
+  }
+}
+
+@media (min-width: $desktop-width) and (min-resolution: $retina-dpi),
+  (min-width: $desktop-width) and (min-resolution: $retina-dppx) {
+  .intro__promo {
+    background-image: url("../img/index-can-desktop@2x.png");
+    background-repeat: no-repeat;
+    background-size: 552px 499px;
+  }
+}

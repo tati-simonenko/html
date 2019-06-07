@@ -1,0 +1,37 @@
+.social {
+  margin: 30px auto 46px;
+  border-bottom: 1px solid #ececec;
+  display: flex;
+}
+
+.social__list {
+  @include list();
+  margin: 0 auto;
+  display: flex;
+}
+
+.social__item {
+  margin: 0 20px;
+}
+
+.social__item:hover svg {
+  fill: #46c1ae;
+}
+
+.social__item:active svg {
+  fill: #46c1ae;
+  opacity: 0.3;
+}
+
+@media (min-width: 768px) {
+  .social {
+    margin-top: 62px;
+    margin-left: 142px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .social {
+    margin-left: 332px;
+  }
+}

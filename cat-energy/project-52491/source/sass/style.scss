@@ -1,0 +1,47 @@
+// global
+
+@import "normalize";
+@import "variables";
+@import "mixins";
+@import "global";
+@import "blocks/button";
+@import "blocks/container";
+@import "blocks/page-header";
+@import "blocks/logo";
+@import "blocks/main-nav";
+@import "blocks/page-main";
+@import "blocks/page-title";
+@import "blocks/page-footer";
+@import "blocks/dealers";
+@import "blocks/social-list";
+@import "blocks/copyright";
+@import "blocks/svg-sprite";
+@import "blocks/visually-hidden";
+
+// index
+
+@import "blocks/intro";
+@import "blocks/program";
+@import "blocks/program-card";
+@import "blocks/advantages";
+@import "blocks/example";
+@import "blocks/example-statistic";
+
+// catalog
+
+@import "blocks/catalog";
+@import "blocks/catalog-item";
+@import "blocks/show-more";
+@import "blocks/additional";
+@import "blocks/additional-item";
+@import "blocks/promo";
+
+// form
+
+@import "blocks/page-description";
+@import "blocks/form";
+@import "blocks/fieldset";
+@import "blocks/field";
+@import "blocks/textarea";
+@import "blocks/target-list";
+@import "blocks/additional-list";

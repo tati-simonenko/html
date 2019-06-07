@@ -1,0 +1,46 @@
+.copyright {
+  display: flex;
+  align-items: center;
+  width: 130px;
+  margin: 0 auto;
+}
+
+.copyright__link {
+  height: 40px;
+  margin-left: 6px;
+}
+
+.copyright__link svg {
+  margin-left: 8px;
+  height: 40px;
+
+  &:hover,
+  &:focus {
+    fill: #81b3d2;
+  }
+
+  &:active {
+    fill: #bdbbbc;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .copyright__link {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright__link {
+    margin-left: 25px;
+  }
+
+  .copyright__link svg {
+    margin-left: 0;
+  }
+}

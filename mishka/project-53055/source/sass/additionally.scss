@@ -1,0 +1,31 @@
+.additionally {
+  width: 87%;
+  min-height: 109px;
+  padding: 15px;
+
+  @include text(17px, 18px);
+  border: 2px solid #444444;
+  margin-top: 5px;
+}
+
+.additionally:hover {
+  border-color: #62d1ba;
+}
+
+.additionally:focus {
+  border-color: #62d1ba;
+}
+
+@media (min-width: 768px) {
+  .additionally {
+    width: 70%;
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .additionally {
+    width: 77%;
+    font-size: 19px;
+  }
+}

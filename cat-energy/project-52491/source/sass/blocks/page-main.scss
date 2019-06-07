@@ -1,0 +1,37 @@
+.page-main {
+  position: relative;
+  margin: 0 auto;
+}
+
+@media (min-width: $desktop-width) {
+  .page-main {
+    position: static;
+  }
+
+  .page-main--index::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: none;
+    display: block;
+    height: 696px;
+    width: 50%;
+    z-index: -1;
+
+    background-color: #63a73a;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+}
+
+@media (min-width: $desktop-width) and (min-resolution: $retina-dpi),
+  (min-width: $desktop-width) and (min-resolution: $retina-dppx) {
+  .page-main--index::before {
+    background-image: url("../img/index-background-desktop@2x.jpg");
+    background-size: 720px 696px;
+  }
+}

@@ -1,0 +1,82 @@
+.title {
+  @include title();
+}
+//Верхний заголовок на главной странице
+.title--index {
+  @media (max-width: $tablet-width - 0.02) {
+    color: $white;
+  }
+}
+
+//Заголовок с декоративной линией
+.title--line {
+  position: relative;
+  display: inline-block;
+  padding-right: 1em;
+  background-color: #ffffff;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 1em;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -1em;
+  }
+
+  .form-page & {
+    padding-right: 1.1em;
+
+    @media (min-width: $tablet-width) {
+      margin-left: -1.1em;
+      padding-left: 1.1em;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 3px;
+    left: 2px;
+    right: -9999px;
+    top: 0.6em;
+    background-color: $brand-color;
+    z-index: -1;
+
+    @media (min-width: $tablet-width) {
+      left: -9999px;
+    }
+  }
+}
+
+.title__br--line {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+// .title__text--line {
+//   position: relative;
+//   display: block;
+//   // flex-shrink: 0;
+//   padding-right: 1em;
+//   background-color: #ffffff;
+//   z-index: 1;
+
+//   @media (min-width: $tablet-width) {
+//     padding-left: 1em;
+//   }
+
+//   @media (min-width: $desktop-width) {
+//     margin-left: -1em;
+//   }
+
+//   .form-page & {
+//     padding-right: 1.1em;
+
+//     @media (min-width: $tablet-width) {
+//       margin-left: -1.1em;
+//       padding-left: 1.1em;
+//     }
+//   }
+// }

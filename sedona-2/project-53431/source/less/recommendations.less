@@ -1,0 +1,138 @@
+.recommendations {
+  margin: 0;
+  padding-bottom: 15px;
+  padding-left: 70px;
+  text-align: left;
+}
+
+.recommendations__item {
+  padding-right: 40px;
+  position: relative;
+  line-height: 11px;
+}
+
+.recommendations__item svg {
+  fill: @blue;
+}
+
+.recommendations__title {
+  font-size: @font-size;
+  margin-top: 34px;
+  margin-bottom: 18px;
+}
+
+.recommendations__image--house {
+  height: 37px;
+  width: 36px;
+  position: absolute;
+  top: -10px;
+  left: -47px;
+}
+
+.recommendations__image--souvenirs {
+  height: 38px;
+  width: 32px;
+  position: absolute;
+  top: -18px;
+  left: -47px;
+}
+
+.recommendations__image--food {
+  height: 35px;
+  width: 40px;
+  position: absolute;
+  top: -13px;
+  left: -53px;
+}
+
+.recommendations p {
+  line-height: 21px;
+}
+
+@media (min-width: @tablet-width) {
+  .recommendations {
+    display: flex;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 132px;
+    padding-bottom: 5px;
+    padding-left: 0;
+  }
+
+  .recommendations__item--house {
+    order: 1;
+  }
+
+  .recommendations__item--food {
+    order: 2;
+  }
+
+  .recommendations__item--souvenirs {
+    order: 3;
+  }
+
+  .recommendations__image--house {
+    left: 34%;
+    top: -71px;
+    width: 75px;
+    height: 72px;
+  }
+
+  .recommendations__image--food {
+    top: -69px;
+    left: 34%;
+    height: 68px;
+    width: 77px;
+  }
+
+  .recommendations__image--souvenirs {
+    top: -75px;
+    left: 37%;
+    height: 75px;
+    width: 64px;
+  }
+
+  .recommendations__title {
+    margin-bottom: 25px;
+    font-size: 21px;
+  }
+
+  .recommendations__item {
+    padding-right: 0;
+    width: 256px;
+  }
+
+  .recommendations p {
+    padding-left: 45px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .recommendations__item {
+    width: 400px;
+  }
+
+  .recommendations__item--souvenirs p {
+    padding-right: 60px;
+  }
+
+  .recommendations__image--house {
+    left: 159px;
+    top: -72px;
+  }
+
+  .recommendations__image--souvenirs {
+    top: -76px;
+    left: 167px;
+  }
+
+  .recommendations__image--food {
+    top: -70px;
+    left: 161px;
+  }
+
+  .recommendations p {
+    padding-left: 50px;
+  }
+}

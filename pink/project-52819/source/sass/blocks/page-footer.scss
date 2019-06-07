@@ -1,0 +1,168 @@
+.page-footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.page-footer__index-page {
+  display: none;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 320px;
+  margin: 0 auto;
+}
+
+.page-footer__logo {
+  margin-bottom: 35px;
+}
+
+.page-footer__logo--tablet {
+  &:hover path,
+  &:focus path {
+    fill: $red-color;
+  }
+
+  &:active path {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__logo-image {
+  display: none;
+}
+
+.page-footer__social {
+  margin-bottom: 21px;
+}
+
+.page-footer__social-list {
+  @include margin0-padding0;
+
+  display: flex;
+  list-style: none;
+}
+
+.page-footer__social-item {
+  margin-right: 11px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.page-footer__social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 46px;
+  height: 46px;
+
+  border-radius: 50%;
+  border: 3px solid $text-color-10;
+
+  &:hover,
+  &:focus {
+    border: 3px solid $text-color;
+  }
+
+  &:active {
+    border: 3px solid $text-color-10;
+  }
+}
+
+.page-footer__social-link-icon {
+  fill: $red-color;
+
+  &:active {
+    fill: $red-color-30;
+  }
+}
+
+.page-footer__copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-footer__logo--desktop {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer__index-page {
+    display: flex;
+  }
+
+  .page-footer {
+    padding-top: 30px;
+    padding-bottom: 37px;
+  }
+
+  .page-footer__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 620px;
+    margin: 0 auto;
+  }
+
+  .page-footer__logo {
+    margin-bottom: 0;
+  }
+
+  .page-footer__logo--desktop {
+    display: none;
+  }
+
+  .page-footer__social {
+    margin-bottom: 0;
+  }
+
+  .page-footer__social-list {
+    margin-right: 19px;
+    margin-top: 8px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    margin: 0 auto;
+    justify-content: space-between;
+
+    padding-top: 95px;
+    padding-bottom: 70px;
+  }
+
+  .page-footer__wrapper {
+    width: 940px;
+    margin: 0 auto;
+  }
+
+  .page-footer__logo--tablet {
+    display: none;
+  }
+
+  .page-footer__logo--desktop {
+    margin-top: -20px;
+    display: block;
+
+    &:hover path,
+    &:focus path {
+      fill: $red-color;
+    }
+
+    &:active path {
+      opacity: 0.3;
+    }
+  }
+
+  .page-footer__social-list {
+    margin-right: 0;
+  }
+}

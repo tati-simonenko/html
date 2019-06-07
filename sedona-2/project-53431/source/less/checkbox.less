@@ -1,0 +1,135 @@
+.checkbox {
+  padding: 0;
+}
+
+.checkbox__list {
+  padding: 0;
+  margin-top: 32px;
+  margin-bottom: 39px;
+}
+
+.checkbox__label {
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  text-transform: initial;
+  font-weight: bold;
+  font-size: @font-size;
+  margin-bottom: 30px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox__item {
+  padding-left: 20px;
+  padding-bottom: 27px;
+}
+
+.checkbox__item:last-child {
+  padding-bottom: 0;
+}
+
+.checkbox__value {
+  margin-left: 78px;
+}
+
+.checkbox__input {
+  margin-right: 27px;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox__checkmark {
+  position: absolute;
+  top: -14px;
+  left: -2px;
+  width: 50px;
+  height: 51px;
+  background-color: #f2f2f2;
+}
+
+.checkbox__checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox__label:hover input ~ .checkbox__checkmark {
+  background-color: #e5e5e5;
+}
+
+.checkbox__label:active input ~ .checkbox__checkmark {
+  background-color: #d5d5d5;
+}
+
+.checkbox__label input:checked ~ .checkbox__checkmark::after {
+  content: "";
+  display: block;
+}
+
+.checkbox__label input:checked:active ~ .checkbox__checkmark::after {
+  color: #333333;
+  opacity: 0.3;
+}
+
+.checkbox__label .checkbox__checkmark::after,
+.checkbox__label:active input ~ .checkbox__checkmark::after {
+  content: "";
+  left: 19px;
+  top: 11px;
+  width: 11px;
+  height: 18px;
+  border: solid 2px black;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+@media (min-width: @tablet-width) {
+  .checkbox {
+    margin: 0 auto;
+  }
+
+  .checkbox__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 460px;
+  }
+
+  .checkbox__item {
+    padding-left: 0;
+    padding-bottom: 35px;
+    width: 200px;
+  }
+
+  .checkbox .form__title {
+    margin-left: 185px;
+    margin-right: 200px;
+    margin-top: 19px;
+    margin-bottom: 55px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .checkbox {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  .checkbox__list {
+    justify-content: space-between;
+    width: 960px;
+    margin-left: 0;
+  }
+
+  .checkbox .form__title {
+    margin-left: 342px;
+    margin-right: 400px;
+  }
+}

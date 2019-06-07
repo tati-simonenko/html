@@ -1,0 +1,44 @@
+
+.copyright__text {
+  @include margin0-padding0;
+
+  padding-top: 13px;
+
+  font-family: $font-family;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+
+  color: $text-color;
+}
+
+.copyright__link {
+  @include margin0-padding0;
+  display: block;
+  font-size: 0;
+  padding-top: 17px;
+}
+
+.copyright__link-icon {
+  margin-left: 14px;
+
+  &:hover path,
+  &:focus path {
+    fill: $text-color;
+  }
+
+  &:active path {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .copyright__text {
+    padding-top: 0;
+    font-size: 18px;
+  }
+
+  .copyright__link {
+    padding-top: 0;
+  }
+}

@@ -1,0 +1,95 @@
+@mixin menu($size:17px) {
+  display: block;
+  padding-top: 26px;
+  padding-left: 76px;
+  padding-bottom: 28px;
+  font-family: "Open Sans", "Tahoma", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  font-style: normal;
+  line-height: 24px;
+  color: #000000;
+  text-decoration: none;
+}
+
+@mixin title($size:25px , $line:30px, $color:#000000) {
+  font-size: $size;
+  line-height: $line;
+  font-family: "Open Sans", "Tahoma", sans-serif;
+  font-weight: bold;
+  color: $color;
+}
+
+@mixin text($size:15px ,$line:20px) {
+  font-size: $size;
+  line-height: $line;
+  font-family: "Open Sans", "Tahoma", sans-serif;
+  font-weight: normal;
+  color: #444444;
+}
+
+@mixin button($vertical:14px,$horizon:0) {
+  font-size: 17px;
+  line-height: 20px;
+  font-family: "Open Sans", "Tahoma", sans-serif;
+  font-weight: bold;
+  color: #444444;
+  text-transform: uppercase;
+  padding: $vertical $horizon;
+  border: 2px solid #444444;
+  background-color: #ffffff;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 33px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 768px) {
+    width: 260px;
+    margin: 0;
+  }
+}
+
+@mixin list() {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin list-point($size:17px,$line:20px) {
+  font-size: $size;
+  line-height: $line;
+  font-family: "Open Sans", "Tahoma", sans-serif;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 83px;
+}
+
+@mixin border() {
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  border-top: 1px solid #62d1ba;
+}
+
+@mixin point() {
+  width: 100%;
+  border-top: 1px solid #ececec;
+
+  @media (min-width: 768px) {
+    width: auto;
+  }
+}
+
+@mixin visually-hidden() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

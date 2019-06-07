@@ -1,0 +1,155 @@
+.main-nav {
+  position: relative;
+  background-color: $nav-bg-color;
+}
+
+.main-nav__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-nav-button__wrapper {
+  position: relative;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.main-nav__toggle {
+  position: absolute;
+
+  top: -48px;
+  right: -6px;
+  z-index: 2;
+
+  background: transparent;
+
+  cursor: pointer;
+  border: none;
+}
+
+.main-nav--closed .main-nav__toggle-icon--burger {
+  display: block;
+}
+
+.main-nav--opened .main-nav__toggle-icon--burger {
+  display: none;
+}
+
+.main-nav--closed .main-nav__toggle-icon--cross {
+  display: none;
+}
+
+.main-nav--opened .main-nav__toggle-icon--cross {
+  display: block;
+}
+
+.main-nav__toggle-icon--burger {
+  fill: $white-color;
+
+  &:hover,
+  &:focus {
+    fill: $red-color;
+  }
+
+  &:active {
+    fill: $white-color-30;
+  }
+}
+
+.main-nav__toggle-icon--cross {
+  fill: $white-color;
+
+  &:hover,
+  &:focus {
+    fill: $red-color;
+  }
+
+  &:active {
+    fill: $white-color-30;
+  }
+}
+
+.main-nav__list {
+  @include margin0-padding0;
+
+  list-style: none;
+  cursor: pointer;
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-nav--opened {
+    margin-bottom: -66px;
+  }
+
+  .main-nav--closed .page-header__wrapper {
+    height: 66px;
+  }
+}
+
+@media (max-width: $tablet-width-only) {
+  .main-nav--closed .page-header__wrapper {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+
+    background-color: $black-color-30;
+  }
+
+  .main-nav--opened .page-header__background {
+    border-bottom: 1px solid $black-color;
+  }
+
+  .main-nav--closed .site-list__item {
+    display: none;
+  }
+
+  .main-nav--opened .site-list__item {
+    display: block;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (max-width: $tablet-width-only) and (min-width: $mobile-width-only) {
+  .main-nav--opened {
+    margin-bottom: -110px;
+  }
+
+  .main-nav--closed .page-header__wrapper {
+    height: 110px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    margin: 0 auto;
+  }
+
+  .main-nav-button__wrapper {
+    position: relative;
+    width: 620px;
+    margin: 0 auto;
+  }
+
+  .main-nav__toggle {
+    top: -69px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    margin: 0;
+    min-height: auto;
+    background-color: transparent;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__wrapper {
+    padding: 0;
+  }
+}

@@ -1,0 +1,21 @@
+.program {
+  margin-bottom: 18px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+@media (min-width: $tablet-width) {
+  .program {
+    margin-bottom: 45px;
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+    padding: 0 40px;
+  }
+}

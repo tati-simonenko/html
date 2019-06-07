@@ -1,0 +1,45 @@
+.button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 40px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  font-family: $title-font-family;
+  color: #ffffff;
+  border: none;
+  background-color: $brand-color;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    width: 245px;
+    min-height: 52px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    background-color: #5eaa2f;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.button--pale {
+  background-color: $gray-light;
+  color: $text-color;
+
+  &:hover,
+  &:focus {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    background-color: #ebebeb;
+    color: rgba(68, 68, 68, 0.3);
+  }
+}

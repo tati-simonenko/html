@@ -1,0 +1,33 @@
+.htmlacademy {
+  justify-content: space-between;
+  min-width: 165px;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover .htmlacademy__logo-img,
+  &:focus .htmlacademy__logo-img {
+    fill: #68b738;
+  }
+
+  &:active .htmlacademy__logo-img {
+    fill: #68b738;
+  }
+}
+
+.htmlacademy__link {
+  margin-bottom: 1px;
+  margin-right: 22px;
+  font-size: 16px;
+  line-height: 16px;
+  color: $text-color;
+}
+
+.htmlacademy__logo {
+  margin-top: 6px;
+}
+
+.htmlacademy__logo-img {
+  fill: #666666;
+}

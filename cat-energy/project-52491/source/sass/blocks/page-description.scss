@@ -1,0 +1,28 @@
+.page-description {
+  max-width: 230px;
+  margin: 0 0 0 20px;
+
+  font-family: $font-family-oswald;
+  font-size: 14px;
+  line-height: 18px;
+  color: #111111;
+  text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .page-description {
+    max-width: 325px;
+    margin-top: 35px;
+    margin-left: 40px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-description {
+    margin-top: 57px;
+    margin-left: 0;
+  }
+}

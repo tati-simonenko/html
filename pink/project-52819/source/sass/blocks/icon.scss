@@ -1,0 +1,33 @@
+@media (min-width: $tablet-width) {
+  .icon-crop {
+    width: 22px;
+    height: auto;
+  }
+
+  .icon-fill {
+    width: 24px;
+    height: auto;
+  }
+
+  .icon-contrast {
+    width: 16px;
+    height: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .icon-crop {
+    width: 44px;
+    height: auto;
+  }
+
+  .icon-fill {
+    width: 48px;
+    height: auto;
+  }
+
+  .icon-contrast {
+    width: 32px;
+    height: auto;
+  }
+}

@@ -1,0 +1,38 @@
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 0 auto;
+  max-width: 280px;
+}
+
+.copyright:hover path {
+  fill: #68b738;
+}
+
+.copyright:active {
+  opacity: 0.3;
+}
+
+.copyright__text {
+  font-family: $font-family-arial;
+  font-size: 16px;
+  line-height: 16px;
+  color: #444444;
+  text-decoration: none;
+}
+
+.copyright__logo path {
+  fill: #666666;
+}
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    margin: 0;
+  }
+
+  .copyright__text {
+    margin-right: 23px;
+  }
+}

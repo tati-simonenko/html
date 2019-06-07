@@ -1,0 +1,106 @@
+.additional-product {
+  padding-top: 14px;
+  padding-bottom: 17px;
+  border-bottom: $main-divider #cdcdcd;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 38px;
+    padding-right: 37px;
+    padding-top: 26px;
+    padding-bottom: 27px;
+    border: $main-divider #e6e6e6;
+    border-bottom-color: #d9d9d9;
+    border-top: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 15px;
+    padding-bottom: 16px;
+    border: none;
+    border-bottom: $main-divider #cdcdcd;
+  }
+
+  &:last-child {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 0.02px) {
+      border-bottom-color: #e6e6e6;
+    }
+  }
+}
+
+.additional-product__title {
+  font-size: $title3-font-size;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #222222;
+  margin-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: auto;
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 325px;
+    margin-right: 0;
+    flex-shrink: 0;
+  }
+}
+
+.additional-product__rate {
+  display: flex;
+  margin-bottom: 13px;
+  line-height: 14px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-shrink: 0;
+    margin-right: auto;
+  }
+}
+
+.additional-product__measure {
+  @media (min-width: $desktop-width) {
+    width: 244px;
+    flex-shrink: 0;
+  }
+}
+
+.additional-product__price {
+  margin-left: auto;
+  text-transform: uppercase;
+  flex-shrink: 0;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 0.02px) {
+    min-width: 94px;
+    text-align: right;
+  }
+}
+
+.additional-product__button {
+  width: 100%;
+  min-height: 40px;
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+    margin-top: 0;
+    flex-shrink: 0;
+  }
+}

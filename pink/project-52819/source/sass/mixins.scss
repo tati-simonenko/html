@@ -1,0 +1,10 @@
+@mixin margin0-padding0 {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin font18-30-400 {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+}

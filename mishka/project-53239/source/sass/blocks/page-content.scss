@@ -1,0 +1,60 @@
+.page-heading {
+  padding-top: 71px;
+  padding-bottom: 75px;
+  background-color: $secondary-color;
+  margin-bottom: 30px;
+}
+
+.page-content__title {
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .page-heading {
+    padding-top: 57px;
+    padding-bottom: 90px;
+    position: relative;
+    margin-bottom: 68px;
+    z-index: -1;
+  }
+
+  .page-content__inner::after {
+    position: absolute;
+    content: "";
+    display: block;
+    height: 24px;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    background: url("../img/bg-zigzag-fill.svg") repeat-x;
+    background-size: 768px 26px;
+  }
+
+  .page-content__title {
+    font-size: 43px;
+    line-height: 1.16;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-heading {
+    padding-top: 53px;
+    padding-bottom: 120px;
+    position: relative;
+    margin-bottom: 111px;
+  }
+
+  .page-content__title {
+    font-size: 53px;
+    line-height: 1.08;
+  }
+
+  .page-content__inner::after {
+    height: 33px;
+    background-size: 1150px 34px;
+  }
+}

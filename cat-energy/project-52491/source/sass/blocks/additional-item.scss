@@ -1,0 +1,125 @@
+.additional-item {
+  padding: 13px 0 16px;
+  border-top: 1px solid #ededed;
+  box-sizing: border-box;
+}
+
+.additional-item:last-of-type {
+  border-bottom: 1px solid #ededed;
+}
+
+.additional-item__wrapper {
+  margin-bottom: 16px;
+}
+
+.additional-item__title {
+  margin: 0 0 13px;
+
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #222222;
+  text-transform: uppercase;
+}
+
+.additional-item__description {
+  width: 100%;
+  margin: 0;
+
+  font-family: $font-family-arial;
+  font-size: 14px;
+  line-height: 14px;
+  color: #444444;
+
+  border-spacing: 0;
+}
+
+.additional-item__description td {
+  padding: 0;
+}
+
+.additional-item__description td:last-child {
+  text-align: right;
+}
+
+.additional-item__order {
+  padding-top: 9px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.additional-item__price {
+  text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .additional-item {
+    padding: 25px 38px 28px;
+    border-left: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+  }
+
+  .additional-item__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  .additional-item__title {
+    max-width: 300px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .additional-item__description {
+    width: auto;
+    margin-bottom: 0;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .additional-item__order {
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+
+  .additional-item__price {
+    width: 95px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .additional-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px 0 15px 0;
+
+    border-left: none;
+    border-right: none;
+  }
+
+  .additional-item__wrapper {
+    align-items: center;
+    width: calc(100% - 285px);
+    margin-bottom: 0;
+  }
+
+  .additional-item__title {
+    margin-bottom: 0;
+  }
+
+  .additional-item__description {
+    width: calc(50% - 20px);
+    margin-bottom: 0;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .additional-item__order {
+    width: 245px;
+  }
+}

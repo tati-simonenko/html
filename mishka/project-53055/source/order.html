@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Страница заказа</title>
+  <link rel="preload" href="./fonts/opensans.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensansbold.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <script src="./js/picturefill.js" async></script>
+</head>
+
+<body>
+  <!-- SVG СПРАЙТ -->
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+  <!--/ SVG СПРАЙТ -->
+  <header class="page-header">
+    <nav class="main-nav">
+      <a class="page-header__logo" href="index.html" aria-label="Ссылка на главную странцу">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="./img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
+          <img class="page-header__logo-image" src="./img/logo-mobile.svg" alt="магазин «Мишка»" width="86" height="35">
+        </picture>
+      </a>
+      <button class="main-nav__toggle main-nav__toggle--nojs" type="button" aria-label="Открыть меню"></button>
+
+      <!-- <меню по страницам сайта> -->
+      <ul class="main-nav__site-list main-nav__site-list--nojs site-list">
+        <li class="site-list__point">
+          <a class="site-list__item site-list__item-contacts" href="catalog.html">
+            Каталог товаров
+          </a>
+        </li>
+        <li class="site-list__point">
+          <a class="site-list__item site-list__item-order" href="order.html">
+            Вязание на заказ
+          </a>
+        </li>
+      </ul>
+      <!-- </меню по страницам сайта> -->
+      <!-- <Меню для  пользователя> -->
+      <ul class="main-nav__users-list main-nav__users-list--nojs users-list">
+        <li class="users-list__point">
+          <a class="users-list__item" href="#">
+            <svg class="user-list__login-icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <use xlink:href="#icon-search"></use>
+            </svg>
+            <span class="users-list__search"> Поиск по сайту</span>
+          </a>
+        </li>
+        <li class="users-list__point">
+          <a class="users-list__item" href="basket.html">
+            <svg class="user-list__login-icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <use xlink:href="#icon-cart"></use>
+            </svg>
+            <span class="users-list__basket-text">Корзина: пока пуста</span>
+          </a>
+        </li>
+      </ul>
+      <!-- </меню для пользователя> -->
+      <!-- <Меню новостей в товарах и продаже> -->
+      <ul class="main-nav__list news-list">
+        <li class="news-list__point">
+          <a class="news-list__item" href="catalog.html">
+            Новые поступление
+          </a>
+        </li>
+        <li class="news-list__point">
+          <a class="news-list__item" href="catalog.html">
+            Распродажа
+          </a>
+        </li>
+      </ul>
+      <!-- </Меню новостей в товарах и продаже> -->
+      <p class="page-header__delivery">
+        <a href="delivery.html">
+          Бесплатная доставка по России
+        </a>
+      </p>
+    </nav>
+  </header>
+  <main class="page-main">
+    <section class="order">
+      <h1 class="order__title">
+        Вязание на заказ
+      </h1>
+      <div class="order__support-decor">
+        <div class="order__grid">
+          <p class="order__instruction">
+            Мы будем рады воплотить в жизнь ваши пожелания!
+            Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+          </p>
+        </div>
+        <form class="order__form setting" action="https://echo.htmlacademy.ru" method="post">
+          <!-- <выбор типа> -->
+          <div class="order__indents">
+            <div class="order__grid">
+              <div class="setting__field">
+                <span class="setting__name-field">
+                  Тип
+                </span>
+                <ul class="setting__list type">
+                  <li class="type__point">
+                    <input class="type__interior visually-hidden" type="radio" name="type" id="interior" aria-label="Выбрать аксессуар" checked>
+                    <label class="type__name" for="interior">
+                      <span class="type__name-select">
+                        Аксессуар для интерьера
+                      </span>
+                    </label>
+                  </li>
+                  <li class="type__point">
+                    <input class="type__toy visually-hidden" type="radio" name="type" id="toy" aria-label="Выбрать игрушку">
+                    <label class="type__name" for="toy">
+                      <span class="type__name-select">
+                        Детская игрушка
+                      </span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- </выбор типа> -->
+          <!-- <выбор цвета> -->
+          <div class="order__decor-color">
+            <div class="order__grid">
+              <div class="setting__field">
+                <span class="setting__name-field">
+                  Цвет
+                </span>
+                <ul class="setting__list color">
+                  <li class="color__point">
+                    <input class="color__white visually-hidden" type="checkbox" name="white" id="white" aria-label="Выбрать белый цвет" checked="">
+                    <label class="color__name" for="white">Белый</label>
+                  </li>
+                  <li class="color__point">
+                    <input class="color__grey visually-hidden" type="checkbox" name="grey" id="grey" aria-label="Выбрать серый цвет" checked="">
+                    <label class="color__name" for="grey">Серый</label>
+                  </li>
+                  <li class="color__point">
+                    <input class="color__tiffany visually-hidden" type="checkbox" name="tiffany" id="tiffany" aria-label="Выбрать тиффани цвет">
+                    <label class="color__name" for="tiffany">«Тиффани»</label>
+                  </li>
+                  <li class="color__point">
+                    <input class="color__black visually-hidden" type="checkbox" name="black" id="black" aria-label="Выбрать черный цвет">
+                    <label class="color__name" for="black">Черный</label>
+                  </li>
+                  <li class="color__point">
+                    <input class="color__pink visually-hidden" type="checkbox" name="pink" id="pink" aria-label="Выбрать Розовый цвет">
+                    <label class="color__name" for="pink">Розовый</label>
+                  </li>
+                  <li class="color__point">
+                    <input class="color__orange visually-hidden" type="checkbox" name="orange" id="orange" aria-label="Выбрать Оранжевый цвет">
+                    <label class="color__name" for="orange">Оранжевый</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- </выбор цвета> -->
+          <!-- <поле для ввода инициалов> -->
+          <div class="order__indents-initials">
+            <div class="order__grid">
+              <div class="setting__field">
+                <span class="setting__name-field">
+                  ФИО
+                </span>
+                <ul class="setting__list initials">
+                  <li class="initials__point">
+                    <label class="initials__name" for="name">
+                      Имя:
+                    </label>
+                    <input class="initials__name-input initials__first-name-input" type="text" name="name" id="name" placeholder="Введите ваше имя*" aria-label="Введите имя" required="">
+                  </li>
+                  <li class="initials__point">
+                    <label class="initials__name" for="surname">
+                      Фамилия:
+                    </label>
+                    <input class="initials__name-input" type="text" name="surname" id="surname" placeholder="Укажите фамилию*" aria-label="Введите Фамилию" required="">
+                  </li>
+                  <li class="initials__point">
+                    <label class="initials__name" for="patronymic">
+                      Отчество:
+                    </label>
+                    <input class="initials__name-input" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете" aria-label="Введите отчество">
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- </поле для ввода инициалов> -->
+          <!-- <поле для ввода номера телефона> -->
+          <div class="order__decor-color">
+            <div class="order__grid">
+              <div class="setting__field">
+                <span class="setting__name-field setting__name-tel">
+                  Тел:
+                </span>
+                <ul class="setting__list tel">
+                  <li class="tel__point">
+                    <label class="tel__icon" for="number"></label>
+                    <input class="tel__number" type="tel" name="number" id="number" placeholder="+7 ХХХ ХХХ ХХ ХХ*" pattern="+[7]{1} [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" aria-label="Введите номер телефона" required="">
+                    <svg class="tel__icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="#icon-phone"></use>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+              <!-- </поле для ввода номера телефона> -->
+              <!-- <поле для ввода почты> -->
+              <div class="setting__field">
+                <span class="setting__name-field setting__name-email">
+                  e-mail:
+                </span>
+                <ul class="setting__list email">
+                  <li class="email__point">
+                    <label class="email__icon" for="email-text"></label>
+                    <input class="email__text" type="email" name="email-text" id="email-text" placeholder="Ваш Email*" aria-label="Введите ваш email" required="">
+                    <svg class="email__icon" width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <use xlink:href="#icon-mail"></use>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- </поле для ввода почты> -->
+          <!-- <поле для ввода дополниельных параметров> -->
+          <div class="order__indents-area">
+            <div class="order__grid">
+              <div class="setting__field">
+                <span class="setting__name-field">
+                  Доп
+                </span>
+                <textarea class="setting__area additionally" name="additionally-area" placeholder="Опишите все ваши пожелания к заказу" aria-label="Введите выши пожелания"></textarea>
+              </div>
+              <!-- </поле для ввода дополниельных параметров> -->
+              <div class="setting__button-wrapper">
+                <p class="setting__instuction">
+                  *Поля обязательны для заполнения
+                </p>
+                <button class="setting__order button" type="submit" name="submit-setting" aria-label="Отправить заказ">
+                  <span>
+                    Отправить заказ
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__grid">
+      <div class="page-footer__logo-wrapper">
+        <a class="page-footer__logo" href="index.html" aria-label="Сыылка на главную страницу">
+          <svg class="social__item-icon" width="100" height="35" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-label="Логотип магазина">
+            <use xlink:href="#logo-footer"></use>
+          </svg>
+        </a>
+      </div>
+      <!-- <магазин в соц сетях> -->
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__inst" href="#" aria-label="Наш магазин в интсраграме">
+              <svg class="social__item-icon" width="21" height="21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-label="иконка соц-сети">
+                <use xlink:href="#icon-insta"></use>
+              </svg>
+
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__fb" href="#" aria-label="Наш магазин в фейсбуке">
+              <svg class="social__item-icon" width="14" height="27" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-label="иконка соц-сети">
+                <use xlink:href="#icon-fb"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__tw" href="#" aria-label="наш магазин в твиттере">
+              <svg class="advantages__item-icon" width="23" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-label="иконка соц-сети">
+                <use xlink:href="#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- </магазин в соц сетях> -->
+      <div class="page-footer__develop develop">
+        <a class="develop__item" href="https://htmlacademy.ru/intensive/adaptive" aria-label="ссылка на HTMl Academy">
+          Разработано
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

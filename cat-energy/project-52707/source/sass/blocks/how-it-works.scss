@@ -1,0 +1,23 @@
+.how-it-works {
+  margin-bottom: 42px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 101px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 125px;
+  }
+}
+
+.how-it-works__title {
+  font-size: $title1-font-size;
+  line-height: 60px;
+  margin-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 73px;
+    font-size: 60px;
+    width: $tablet-width;
+  }
+}

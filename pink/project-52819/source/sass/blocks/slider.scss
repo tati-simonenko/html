@@ -1,0 +1,46 @@
+.slider__item-display-none {
+  display: none;
+}
+
+.slider__toggle {
+  @include margin0-padding0;
+
+  margin-right: 18px;
+
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+
+  background-color: $text-color-30;
+  border: none;
+  cursor: pointer;
+}
+
+.slider__toggle:last-child {
+  margin-right: 0;
+}
+
+.slider__toggle:hover,
+.slider__toggle:focus {
+  background-color: $text-color-60;
+}
+
+.slider__toggle:active {
+  background-color: $text-color-10;
+}
+
+.slider__toggle--active {
+  width: 12px;
+  height: 12px;
+  background-color: $white-color;
+  border: 3px solid $text-color;
+}
+
+.slider__toggle--active:hover,
+.slider__toggle--active:focus {
+  background-color: $white-color;
+}
+
+.slider__toggle--active:active {
+  background-color: $white-color;
+}

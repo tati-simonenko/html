@@ -1,0 +1,50 @@
+.control__bar {
+  margin: 0 auto;
+  width: 240px;
+  height: 2px;
+  background-color: $text-color;
+}
+
+.control__toggle {
+  position: relative;
+  margin: 0 auto;
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    top: -8px;
+    left: 185px;
+
+    width: 10px;
+    height: 10px;
+
+    background-color: $grey-bg;
+    border: 2px solid $red-color;
+    border-radius: 50%;
+  }
+
+  cursor: pointer;
+}
+
+.control {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .control {
+    display: block;
+  }
+
+  .control__bar {
+    width: 100%;
+  }
+
+  .control__toggle::after {
+    left: 146px;
+  }
+
+  .control-mobile {
+    display: none;
+  }
+}

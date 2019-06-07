@@ -1,0 +1,128 @@
+.advantages {
+  margin-bottom: 35px;
+}
+
+.advantages__grid {
+  max-width: 320px;
+  padding: 0 30px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.advantages__title {
+  @include title();
+  margin: 0 auto;
+  margin-bottom: 85px;
+  padding: 0 27px;
+  max-width: 320px;
+}
+
+.advantages__list {
+  @include list();
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.advantages__item {
+  @include list-point();
+  position: relative;
+  width: 100%;
+}
+
+.advantages__item:last-child {
+  margin-bottom: 0;
+}
+
+.advantages__item img {
+  position: absolute;
+  top: -50px;
+  fill: #63d1bb;
+}
+
+@media (min-width: 768px) {
+  .advantages {
+    margin-bottom: 32px;
+  }
+
+  .advantages .advantages__item--ecology {
+    order: -3;
+  }
+
+  .advantages__item img {
+    top: -55px;
+  }
+
+  .advantages__item--style {
+    order: -1;
+  }
+
+  .advantages__item--related {
+    order: -2;
+  }
+
+  .advantages__item--support {
+    order: -1;
+  }
+
+  .advantages__grid {
+    padding: 0 50px;
+    max-width: 768px;
+  }
+
+  .advantages__title {
+    font-size: 43px;
+    line-height: 50px;
+    padding: 0 45px;
+    max-width: 768px;
+    margin: 0 auto 5px;
+  }
+
+  .advantages__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .advantages__item {
+    margin-right: 34px;
+    margin-bottom: 14px;
+    width: 300px;
+    font-size: 20px;
+    line-height: 22px;
+    margin-top: 98px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .advantages {
+    margin-bottom: 0;
+  }
+
+  .advantages__title {
+    font-size: 53px;
+    line-height: 57px;
+    padding-left: 105px;
+    margin: 2px auto;
+  }
+
+  .advantages__grid {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 0 10%;
+  }
+
+  .advantages__item {
+    //Временно
+    width: 38%;
+    margin-right: 0;
+  }
+
+  .advantages__grid br {
+    display: block;
+  }
+
+  .advantages__list {
+    justify-content: center;
+  }
+}

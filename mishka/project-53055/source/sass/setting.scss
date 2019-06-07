@@ -1,0 +1,145 @@
+.setting {
+  display: flex;
+  flex-direction: column;
+}
+
+.setting__button-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include text(14px, 16px);
+}
+
+.setting__list {
+  padding: 0;
+  list-style: none;
+}
+
+.setting__field {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.setting__name-field {
+  display: flex;
+  align-items: center;
+
+  @include title(17px,16px,#63d1bb);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.setting__name-field::after {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  margin-left: 25px;
+  background-color: #63d1bb;
+}
+
+.setting__order {
+  @include button();
+  margin-top: 18px;
+}
+
+.setting__order:hover {
+  background-color: #444444;
+  color: #ffffff;
+}
+
+.setting__order:active span {
+  opacity: 0.3;
+}
+
+.setting::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  opacity: 0.5;
+}
+
+.setting::-moz-placeholder {
+  /* Firefox 19+ */
+  opacity: 0.5;
+}
+
+.setting:-ms-input-placeholder {
+  /* IE 10+ */
+  opacity: 0.5;
+}
+
+.setting:-moz-placeholder {
+  /* Firefox 18- */
+  opacity: 0.5;
+}
+
+@media (min-width: 768px) {
+  .setting__name-field {
+    margin-right: 78px;
+    padding-top: 20px;
+    width: 88px;
+  }
+
+  .setting__wrapper {
+    padding-left: 170px;
+  }
+
+  .setting__button-wrapper {
+    margin-top: 42px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .setting__field {
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 0;
+  }
+
+  .setting__name-field::after {
+    display: none;
+  }
+
+  .setting__order {
+    width: 230px;
+    height: 52px;
+    margin-top: 9px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .setting__name-field {
+    margin-right: 27px;
+  }
+
+  .setting__list {
+    width: 87%;
+  }
+
+  .setting__field {
+    padding-right: 126px;
+    padding-left: 60px;
+  }
+
+  .setting__button-wrapper {
+    padding-right: 174px;
+    padding-left: 174px;
+  }
+
+  .setting__name-tel {
+    padding-top: 26px;
+    margin-right: 7px;
+  }
+
+  .setting__name-email {
+    padding-top: 23px;
+    margin-right: 7px;
+  }
+
+  .setting__order {
+    width: 230px;
+    height: 52px;
+    margin-top: 6px;
+  }
+}

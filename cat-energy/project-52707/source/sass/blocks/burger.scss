@@ -1,0 +1,27 @@
+.burger {
+  display: block;
+  width: 25px;
+  height: 19px;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/icon-mobile-menu.svg");
+  cursor: pointer;
+
+  &--close {
+    width: 19px;
+    height: 19px;
+    background-image: url("../img/icon-close.svg");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .burger {
+    display: none;
+  }
+}
+
+.burger--hide {
+  display: none;
+}

@@ -1,0 +1,104 @@
+.show-more {
+  position: relative;
+  padding-top: 26px;
+  padding-bottom: 25px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 324px;
+    margin-top: 140px;
+    padding-top: 54px;
+    padding-bottom: 39px;
+    padding-left: 37px;
+    padding-right: 36px;
+    border: 1px solid #e6e6e6;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+    margin-top: 142px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -$mobile-external-paddings;
+    right: -$mobile-external-paddings;
+    bottom: 0;
+    display: block;
+    height: 1px;
+    background-color: #ededed;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: -$desktop-external-paddings;
+      right: -$desktop-external-paddings;
+    }
+  }
+}
+
+.show-more__button-plus {
+  display: block;
+  width: 31px;
+  height: 31px;
+  margin: 0 auto;
+  margin-bottom: 23px;
+  background: url("../img/icon-plus-mobile.svg");
+  opacity: 0.2;
+
+  @media (min-width: $tablet-width) {
+    width: 61px;
+    height: 61px;
+    margin-bottom: 49px;
+    background: url("../img/icon-plus.svg");
+  }
+}
+
+.show-more__title {
+  font-size: $title3-font-size;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.show-more__lead {
+  margin: 0;
+  margin-bottom: 21px;
+  font-size: $small-font-size;
+  line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 86px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: $text2-font-size;
+    line-height: normal;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.show-more__button {
+  width: 100%;
+  min-height: 40px;
+  font-size: $title3-font-size;
+  line-height: 20px;
+}

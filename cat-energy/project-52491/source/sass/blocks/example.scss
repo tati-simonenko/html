@@ -1,0 +1,263 @@
+.example {
+  padding-top: 17px;
+  padding-bottom: 35px;
+  box-sizing: border-box;
+
+  background-color: #f2f2f2;
+}
+
+.example__title {
+  margin: 0;
+  margin-left: 20px;
+  margin-bottom: 24px;
+
+  font-size: 36px;
+  line-height: 60px;
+  font-weight: 400;
+  color: #111111;
+}
+
+.example__text {
+  margin: 0 20px 25px;
+  padding-right: 10px;
+
+  font-family: $font-family-arial;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+}
+
+.example__price {
+  margin: 0;
+  margin-bottom: 35px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: #111111;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.example__price-text,
+.example__price-sum {
+  display: inline-block;
+  margin: 0;
+}
+
+.example__before,
+.example__after {
+  font-size: 16px;
+  line-height: 20px;
+  color: #111111;
+  text-transform: uppercase;
+}
+
+.example__statistic-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-bottom: 34px;
+}
+
+.example__pic {
+  width: 100%;
+  margin-bottom: 29px;
+}
+
+.example__slider {
+  display: flex;
+  justify-content: space-between;
+  max-width: 198px;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .example {
+    padding: 0 0 68px;
+  }
+
+  .example__title-wrapper {
+    padding: 43px 0 63px 30px;
+
+    background-color: #ffffff;
+  }
+
+  .example__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    padding-bottom: 230px;
+    background-color: #ffffff;
+  }
+
+  .example__demonstration {
+    position: relative;
+    width: 100%;
+    padding-top: 369px;
+    padding-left: 45px;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+  }
+
+  .example__title {
+    margin: 0 auto;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .example__text {
+    max-width: 680px;
+    margin-left: 30px;
+    margin-bottom: 53px;
+    margin-right: calc(100% - 710px);
+    padding: 0;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .example__statistic-wrapper {
+    width: 366px;
+    margin-left: 30px;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .example__price {
+    margin-right: 30px;
+    padding-top: 12px;
+  }
+
+  .example__price-text,
+  .example__price-sum {
+    display: block;
+    width: auto;
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  .example__price-text {
+    margin-bottom: 10px;
+  }
+
+  .example__pic {
+    position: absolute;
+    top: -165px;
+    left: 45px;
+
+    width: 690px;
+    height: 515px;
+    margin-bottom: 17px;
+  }
+
+  .example__slider {
+    max-width: 570px;
+    margin-left: 55px;
+  }
+
+  .example__before,
+  .example__after {
+    padding-bottom: 5px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    border-bottom: 1px dotted #bebebe;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example {
+    position: relative;
+    padding: 0 0 30px;
+  }
+
+  .example__title-wrapper {
+    margin-bottom: 0;
+    padding: 55px 20px 75px;
+    background-color: #ffffff;
+  }
+
+  .example__title {
+    max-width: $desktop-width;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .example__wrapper {
+    position: relative;
+    padding-top: 71px;
+    padding-right: 650px;
+    padding-left: 40px;
+    padding-bottom: 0;
+
+    background-color: #f2f2f2;
+  }
+
+  .example__text {
+    max-width: 435px;
+    margin-left: 0;
+    margin-bottom: 69px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .example__statistic-wrapper {
+    width: 366px;
+    margin-left: 0;
+    margin-bottom: 40px;
+  }
+
+  .example__price {
+    display: flex;
+    justify-content: space-between;
+    width: 327px;
+    padding-top: 20px;
+    padding-left: 0;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  .example__demonstration {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 40px);
+    width: 650px;
+    height: 585px;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .example__pic {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 690px;
+    height: 517px;
+    margin-bottom: 38px;
+  }
+
+  .example__slider {
+    margin-left: 80px;
+    max-width: 570px;
+  }
+
+  .example__before,
+  .example__after {
+    padding-bottom: 6px;
+    font-size: 20px;
+    line-height: 20px;
+    border-bottom: 1px dotted #bebebe;
+  }
+}
